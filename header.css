@@ -1,0 +1,132 @@
+/* 해더 상단 고정 및 색상 */
+header.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #F8F8F8;
+}
+/* 헤더 전체적인 레이아웃 */
+.header_content {
+    width: 100%;
+    max-width: 75rem;
+    height: 4rem;
+    padding: 0.75rem 1rem;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 */
+.header_content_logo {
+    color: #748873;
+    font-size: 2rem;
+    font-weight: 900;
+    /* 높이 설정 따로 안해줘도 상관 없는 부모 컨테이너에 얼라인 아이템 센터 해놨지 때문 */
+    /* height: 32px; */
+    margin-right: 40px;
+    /* 배추마켓 텍스트 해당 요소 내에서 수직 정렬 */
+    display: flex;
+    align-items: center;
+    /* 라인 높이 쓰면 화면 줄어들을 때 글자 사라짐 */
+    /* line-height: 40px; */
+}
+
+/* 리스트 레이아웃 */
+.header_content_nav {
+    align-items: center;
+    padding: 0 2.5rem 0 0;
+    flex-grow: 1;
+}
+
+.header_content_nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* 화면 줄어 들어도 리스트 요소들 줄 안바뀌게 */
+    display: flex; 
+}
+
+.header_content_nav ul li {
+    /* display: inline-block; */
+    margin-right: 30px;
+    font-size: 1.13rem;
+    font-weight: 900;
+}
+
+.header_content_nav ul li.active {
+    color: #748873;
+}
+
+/* 검색 */
+.header_content_input {
+    justify-content: center;
+    align-items: center;
+}
+
+.header_content_input .search {
+    width: 18rem;
+    height: 2.5rem;
+    padding: 0.5625rem 0.75rem;
+    margin-right: 1rem;
+    background-color: #F2F3F6;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+.header_content_input .chat {
+    line-height: 1.3;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem;
+    background-color: #FFFFFF;
+    border: 0.5px solid #c5c6c9;
+    border-radius: 0.25rem;
+    font-weight: 600;
+}
+
+/* 아이콘 */
+.header_content_input .icon input {
+    margin-right: 1rem;
+    border: none;
+    padding: 0;
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+.header_content_input .icon {
+    display: none;
+}
+
+@media screen and (max-width: 1160px) {
+	.header_content_input .glass {
+        display: block;
+    }
+    .header_content_input .search {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+	.header_content_input .menu {
+        display: block;
+    }
+    .header_content_input .chat {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+	.header_content_logo {
+        font-size: 1rem;
+    }
+    .header_content_nav ul li {
+        font-size: 0.8rem
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .header_content_nav {
+        display: none;
+    }
+}
