@@ -114,10 +114,7 @@ header.header {
     .header_content_input .chat {
         display: none;
     }
-}
-
-@media screen and (max-width: 900px) {
-	.header_content_logo {
+    .header_content_logo {
         font-size: 1rem;
     }
     .header_content_nav ul li {
